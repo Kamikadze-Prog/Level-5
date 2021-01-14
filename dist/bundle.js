@@ -5674,23 +5674,52 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.sayHello = void 0;
+exports.clickChecker = exports.sayHello = void 0;
 // @ts-ignore
 var moment = require("moment");
 function sayHello(name) {
     return name + " " + moment().format('MMMM Do YYYY, h:mm:ss a');
 }
 exports.sayHello = sayHello;
+function clickChecker() {
+    var clickPlus = document.getElementById('plusTime');
+    var clickMinus = document.getElementById('minusTime');
+    var time = document.getElementById('timeSave');
+    var startTimer = document.getElementById('startTimer');
+    clickMinus.addEventListener("click", function () {
+        var val = Number(time.textContent);
+        time.textContent = "" + --val;
+    });
+    clickPlus.addEventListener("click", function () {
+        var val = Number(time.textContent);
+        time.textContent = "" + ++val;
+    });
+    return startTimer.addEventListener("click", function () {
+        var timerWrapper = document.getElementById('time_counter_wrapper');
+        var innerText = document.getElementById('timer-inner-text');
+        timerWrapper.style.display = "none";
+        startTimer.style.display = "none";
+        innerText.textContent = "Осталось";
+        alert(" \u0412 moment \u043E\u0442\u043F\u0440\u0430\u0432\u0438\u043C " + time.textContent + " \u043C\u0438\u043D \u0434\u043B\u044F \u0442\u0430\u0439\u043C\u0435\u0440\u0430)");
+        return time.textContent;
+    });
+}
+exports.clickChecker = clickChecker;
 
 },{"moment":1}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var greet_1 = require("./greet");
+var greet_2 = require("./greet");
 function showHello(divName, name) {
     var elt = document.getElementById(divName);
     elt.innerText = greet_1.sayHello(name);
 }
+function showChecker() {
+    greet_2.clickChecker();
+}
+showChecker();
 showHello("greeting", "Точная дата и время:");
 
 },{"./greet":2}]},{},[3])

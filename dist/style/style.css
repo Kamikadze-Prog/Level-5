@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    min-height: 100px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#time_counter_wrapper {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#minusTime, #plusTime, #startTimer {
+    display: inline-block;
+    border: none;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    background: #0069ed;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+#startTimer {
+    width: 100px;
+    background-color: #10a910 ;
+}
+
+#plusTime:hover, #minusTime:hover {
+    background: #0053ba;
+}
+#startTimer:hover {
+    background-color: #0c810c;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:visited, button:focus, button:active, button:hover {
+    outline: 0 none;
+}

@@ -1,3 +1,6 @@
+// @ts-ignore
+import moment = require("moment");
+
 export function sayHello(name: string) {
-    return `Hello from ${name}`;
+    return `${name} ${moment().format('MMMM Do YYYY, h:mm:ss a')}`;
 }

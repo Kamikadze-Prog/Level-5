@@ -2,8 +2,8 @@
 import moment = require("moment");
 
 export function sayHello(name: string) {
-
-    return `${name} ${moment().format('MMMM Do YYYY, h:mm:ss a')}`;
+    //${moment().format('MMMM Do YYYY, h:mm:ss a')}
+    return `${name} `;
 }
 
 export function clickChecker() {
@@ -21,14 +21,26 @@ export function clickChecker() {
         time.textContent = `${++val}`
     })
 
-   return   startTimer.addEventListener("click", () => {
-        const timerWrapper = document.getElementById('time_counter_wrapper');
+    startTimer.addEventListener("click", () => {
         const innerText = document.getElementById('timer-inner-text');
-        timerWrapper.style.display = "none";
+        clickMinus.style.display = "none";
+        clickPlus.style.display = "none";
         startTimer.style.display = "none";
         innerText.textContent = "Осталось";
+
         alert(` В moment отправим ${time.textContent} мин для таймера)`);
-        return time.textContent;
+
+        let eventTime = Number(time.textContent) * 60;
+        let duration = moment.duration(eventTime * 1000, 'milliseconds');
+
+        let timer = setInterval(function () {
+            duration = moment.duration((duration.asSeconds() * 1000) - 1000, 'milliseconds');
+            time.textContent = duration.minutes() + " : " + duration.seconds();
+
+            if (duration.minutes() === 0 && duration.seconds() === 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
     })
 }
 

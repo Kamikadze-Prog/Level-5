@@ -5678,7 +5678,8 @@ exports.clickChecker = exports.sayHello = void 0;
 // @ts-ignore
 var moment = require("moment");
 function sayHello(name) {
-    return name + " " + moment().format('MMMM Do YYYY, h:mm:ss a');
+    //${moment().format('MMMM Do YYYY, h:mm:ss a')}
+    return name + " ";
 }
 exports.sayHello = sayHello;
 function clickChecker() {
@@ -5694,15 +5695,24 @@ function clickChecker() {
         var val = Number(time.textContent);
         time.textContent = "" + ++val;
     });
-    return startTimer.addEventListener("click", function () {
-        var timerWrapper = document.getElementById('time_counter_wrapper');
+    startTimer.addEventListener("click", function () {
         var innerText = document.getElementById('timer-inner-text');
-        timerWrapper.style.display = "none";
+        clickMinus.style.display = "none";
+        clickPlus.style.display = "none";
         startTimer.style.display = "none";
         innerText.textContent = "Осталось";
         alert(" \u0412 moment \u043E\u0442\u043F\u0440\u0430\u0432\u0438\u043C " + time.textContent + " \u043C\u0438\u043D \u0434\u043B\u044F \u0442\u0430\u0439\u043C\u0435\u0440\u0430)");
-        return time.textContent;
+        var eventTime = Number(time.textContent) * 60;
+        var duration = moment.duration(eventTime * 1000, 'milliseconds');
+        var timer = setInterval(function () {
+            duration = moment.duration(duration.asSeconds() * 1000 - 1000, 'milliseconds');
+            time.textContent = duration.minutes() + " : " + duration.seconds();
+            if (duration.minutes() === 0 && duration.seconds() === 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
     });
+    function timer() {}
 }
 exports.clickChecker = clickChecker;
 

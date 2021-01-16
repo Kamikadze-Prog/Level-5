@@ -5683,6 +5683,7 @@ function clickChecker() {
     var time = document.getElementById('timeSave');
     var startTimer = document.getElementById('startTimer');
     var innerText = document.getElementById('timer-inner-text');
+    var oneHour = 60;
     clickMinus.addEventListener("click", function () {
         if (time.textContent == '0 : 00') {
             time.textContent = '0';
@@ -5696,7 +5697,7 @@ function clickChecker() {
             time.textContent = '0';
         }
         var value = Number(time.textContent);
-        var result = value + 1 == 60 ? 0 : ++value;
+        var result = value + 1 == oneHour ? 0 : ++value;
         time.textContent = "" + result;
     });
     startTimer.addEventListener("click", function () {
@@ -5705,7 +5706,7 @@ function clickChecker() {
             clickPlus.classList.toggle('display');
             startTimer.classList.toggle('display');
             innerText.textContent = "Осталось";
-            var eventTime = Number(time.textContent) * 60;
+            var eventTime = Number(time.textContent) * oneHour;
             var duration = moment.duration(eventTime * 1000, 'milliseconds');
             var timer = setInterval(function () {
                 duration = moment.duration(duration.asSeconds() * 1000 - 1000, 'milliseconds');

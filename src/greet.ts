@@ -9,32 +9,44 @@ export function clickChecker() {
     const innerText = document.getElementById('timer-inner-text')
 
     clickMinus.addEventListener("click", () => {
-        let val = Number(time.textContent);
-        time.textContent = `${--val}`
+        if (time.textContent == '0 : 00') {
+            time.textContent = '0';
+        }
+        let value = Number(time.textContent);
+        const result = ((value - 1) < 0) ? 0 : --value
+        time.textContent = `${result}`;
     })
+
     clickPlus.addEventListener("click", () => {
-        let val = Number(time.textContent);
-        time.textContent = `${++val}`
+        if (time.textContent == '0 : 00') {
+            time.textContent = '0';
+        }
+        let value = Number(time.textContent);
+        const result = ((value + 1) == 60) ? 0 : ++value
+        time.textContent = `${result}`;
     })
 
     startTimer.addEventListener("click", () => {
-        clickMinus.style.display = "none";
-        clickPlus.style.display = "none";
-        startTimer.style.display = "none";
-        innerText.textContent = "Осталось";
-        alert(` В moment отправим ${time.textContent} мин для таймера)`);
+        if (Number(time.textContent) != 0) {
+            clickMinus.classList.toggle('display');
+            clickPlus.classList.toggle('display');
+            startTimer.classList.toggle('display');
+            innerText.textContent = "Осталось";
+            const eventTime = Number(time.textContent) * 60;
+            let duration = moment.duration(eventTime * 1000, 'milliseconds');
+            const timer = setInterval(function () {
+                duration = moment.duration((duration.asSeconds() * 1000) - 1000, 'milliseconds');
 
-        const eventTime = Number(time.textContent) * 60;
-        let duration = moment.duration(eventTime * 1000, 'milliseconds');
-
-        const timer = setInterval(function () {
-            duration = moment.duration((duration.asSeconds() * 1000) - 1000, 'milliseconds');
-            time.textContent = duration.minutes() + " : " + duration.seconds();
-
-            if (duration.minutes() === 0 && duration.seconds() === 0) {
-                clearInterval(timer);
-            }
-        }, 1000)
+                let seconds = (duration.seconds() <= 9) ? `0${duration.seconds()}` : duration.seconds(); // add 0 if seconds <=9
+                time.textContent = duration.minutes() + " : " + seconds;
+                if (duration.minutes() === 0 && duration.seconds() === 0) {
+                    clearInterval(timer);
+                    clickMinus.classList.toggle('display');
+                    clickPlus.classList.toggle('display');
+                    startTimer.classList.toggle('display');
+                    innerText.textContent = "Укажите время в минутах";
+                }
+            }, 1000)
+        }
     })
 }
-

@@ -21,7 +21,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.20" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Level-4" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="E:\GitHub\Level-5\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -42,7 +42,10 @@
       <workItem from="1610636104263" duration="13709000" />
       <workItem from="1610701715658" duration="5892000" />
       <workItem from="1610717850641" duration="362000" />
-      <workItem from="1610785444884" duration="4188000" />
+      <workItem from="1610785444884" duration="5244000" />
+      <workItem from="1610799664579" duration="630000" />
+      <workItem from="1610803808667" duration="641000" />
+      <workItem from="1610811129466" duration="4906000" />
     </task>
     <servers />
   </component>
@@ -58,13 +61,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="823" y="317" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610788907929" />
-    <state x="1457" y="309" key="FileChooserDialogImpl" timestamp="1610645999127">
+    <state x="1457" y="309" key="FileChooserDialogImpl" timestamp="1610814854697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1457" y="309" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610645999127" />
+    <state x="1457" y="309" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610814854697" />
     <state x="912" y="289" width="585" height="592" key="find.popup" timestamp="1610644235559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="912" y="289" width="585" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610644235559" />
+    <state x="923" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1610813740660">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="923" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1610813740660" />
   </component>
 </project>

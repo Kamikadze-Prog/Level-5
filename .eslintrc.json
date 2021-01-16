@@ -1,12 +1,13 @@
 {
-
     "env": {
         "browser": true,
         "es2021": true
     },
 
     "extends": [
-        "airbnb", "airbnb/hooks",
+        "airbnb",
+        "airbnb/hooks",
+        "prettier",
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
     ],
@@ -20,6 +21,7 @@
     ],
     "rules": {
         "semi": ["error", "always"],
-        "quotes": ["error", "double"]
+        "quotes": "off"
+       // "quotes": ["error", "double"]
     }
 }

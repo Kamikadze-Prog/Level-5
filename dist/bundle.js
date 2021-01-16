@@ -5684,28 +5684,42 @@ function clickChecker() {
     var startTimer = document.getElementById('startTimer');
     var innerText = document.getElementById('timer-inner-text');
     clickMinus.addEventListener("click", function () {
-        var val = Number(time.textContent);
-        time.textContent = "" + --val;
+        if (time.textContent == '0 : 00') {
+            time.textContent = '0';
+        }
+        var value = Number(time.textContent);
+        var result = value - 1 < 0 ? 0 : --value;
+        time.textContent = "" + result;
     });
     clickPlus.addEventListener("click", function () {
-        var val = Number(time.textContent);
-        time.textContent = "" + ++val;
+        if (time.textContent == '0 : 00') {
+            time.textContent = '0';
+        }
+        var value = Number(time.textContent);
+        var result = value + 1 == 60 ? 0 : ++value;
+        time.textContent = "" + result;
     });
     startTimer.addEventListener("click", function () {
-        clickMinus.style.display = "none";
-        clickPlus.style.display = "none";
-        startTimer.style.display = "none";
-        innerText.textContent = "Осталось";
-        alert(" \u0412 moment \u043E\u0442\u043F\u0440\u0430\u0432\u0438\u043C " + time.textContent + " \u043C\u0438\u043D \u0434\u043B\u044F \u0442\u0430\u0439\u043C\u0435\u0440\u0430)");
-        var eventTime = Number(time.textContent) * 60;
-        var duration = moment.duration(eventTime * 1000, 'milliseconds');
-        var timer = setInterval(function () {
-            duration = moment.duration(duration.asSeconds() * 1000 - 1000, 'milliseconds');
-            time.textContent = duration.minutes() + " : " + duration.seconds();
-            if (duration.minutes() === 0 && duration.seconds() === 0) {
-                clearInterval(timer);
-            }
-        }, 1000);
+        if (Number(time.textContent) != 0) {
+            clickMinus.classList.toggle('display');
+            clickPlus.classList.toggle('display');
+            startTimer.classList.toggle('display');
+            innerText.textContent = "Осталось";
+            var eventTime = Number(time.textContent) * 60;
+            var duration = moment.duration(eventTime * 1000, 'milliseconds');
+            var timer = setInterval(function () {
+                duration = moment.duration(duration.asSeconds() * 1000 - 1000, 'milliseconds');
+                var seconds = duration.seconds() <= 9 ? "0" + duration.seconds() : duration.seconds(); // add 0 if seconds <=9
+                time.textContent = duration.minutes() + " : " + seconds;
+                if (duration.minutes() === 0 && duration.seconds() === 0) {
+                    clearInterval(timer);
+                    clickMinus.classList.toggle('display');
+                    clickPlus.classList.toggle('display');
+                    startTimer.classList.toggle('display');
+                    innerText.textContent = "Укажите время в минутах";
+                }
+            }, 1000);
+        }
     });
 }
 exports.clickChecker = clickChecker;

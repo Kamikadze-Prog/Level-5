@@ -5674,19 +5674,15 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.clickChecker = exports.sayHello = void 0;
+exports.clickChecker = void 0;
 // @ts-ignore
 var moment = require("moment");
-function sayHello(name) {
-    //${moment().format('MMMM Do YYYY, h:mm:ss a')}
-    return name + " ";
-}
-exports.sayHello = sayHello;
 function clickChecker() {
     var clickPlus = document.getElementById('plusTime');
     var clickMinus = document.getElementById('minusTime');
     var time = document.getElementById('timeSave');
     var startTimer = document.getElementById('startTimer');
+    var innerText = document.getElementById('timer-inner-text');
     clickMinus.addEventListener("click", function () {
         var val = Number(time.textContent);
         time.textContent = "" + --val;
@@ -5696,7 +5692,6 @@ function clickChecker() {
         time.textContent = "" + ++val;
     });
     startTimer.addEventListener("click", function () {
-        var innerText = document.getElementById('timer-inner-text');
         clickMinus.style.display = "none";
         clickPlus.style.display = "none";
         startTimer.style.display = "none";
@@ -5712,7 +5707,6 @@ function clickChecker() {
             }
         }, 1000);
     });
-    function timer() {}
 }
 exports.clickChecker = clickChecker;
 
@@ -5721,16 +5715,10 @@ exports.clickChecker = clickChecker;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var greet_1 = require("./greet");
-var greet_2 = require("./greet");
-function showHello(divName, name) {
-    var elt = document.getElementById(divName);
-    elt.innerText = greet_1.sayHello(name);
-}
 function showChecker() {
-    greet_2.clickChecker();
+    greet_1.clickChecker();
 }
 showChecker();
-showHello("greeting", "Точная дата и время:");
 
 },{"./greet":2}]},{},[3])
 

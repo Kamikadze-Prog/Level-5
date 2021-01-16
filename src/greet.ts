@@ -1,16 +1,12 @@
 // @ts-ignore
 import moment = require("moment");
 
-export function sayHello(name: string) {
-    //${moment().format('MMMM Do YYYY, h:mm:ss a')}
-    return `${name} `;
-}
-
 export function clickChecker() {
-    const clickPlus = document.getElementById('plusTime');
-    const clickMinus = document.getElementById('minusTime');
-    const time = document.getElementById('timeSave');
-    const startTimer = document.getElementById('startTimer');
+    const clickPlus = document.getElementById('plusTime')
+    const clickMinus = document.getElementById('minusTime')
+    const time = document.getElementById('timeSave')
+    const startTimer = document.getElementById('startTimer')
+    const innerText = document.getElementById('timer-inner-text')
 
     clickMinus.addEventListener("click", () => {
         let val = Number(time.textContent);
@@ -22,25 +18,23 @@ export function clickChecker() {
     })
 
     startTimer.addEventListener("click", () => {
-        const innerText = document.getElementById('timer-inner-text');
         clickMinus.style.display = "none";
         clickPlus.style.display = "none";
         startTimer.style.display = "none";
         innerText.textContent = "Осталось";
-
         alert(` В moment отправим ${time.textContent} мин для таймера)`);
 
-        let eventTime = Number(time.textContent) * 60;
+        const eventTime = Number(time.textContent) * 60;
         let duration = moment.duration(eventTime * 1000, 'milliseconds');
 
-        let timer = setInterval(function () {
+        const timer = setInterval(function () {
             duration = moment.duration((duration.asSeconds() * 1000) - 1000, 'milliseconds');
             time.textContent = duration.minutes() + " : " + duration.seconds();
 
             if (duration.minutes() === 0 && duration.seconds() === 0) {
                 clearInterval(timer);
             }
-        }, 1000);
+        }, 1000)
     })
 }
 

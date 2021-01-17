@@ -6,10 +6,9 @@
 
     "extends": [
         "airbnb",
-        "airbnb/hooks",
         "prettier",
         "eslint:recommended",
-        "plugin:prettier/recommended",
+        "stylelint-config-prettier"
       //  "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
@@ -20,7 +19,7 @@
     "plugins": [
         "lint",
         "prettier",
-        "@typescript-eslint"
+        "@typescript-eslint/recommended"
     ],
     "rules": {
         "prettier": true,

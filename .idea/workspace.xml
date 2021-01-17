@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58366404-8854-4241-9b8a-1a55c9861d66" name="Default Changelist" comment="" />
+    <list default="true" id="58366404-8854-4241-9b8a-1a55c9861d66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +26,8 @@
     <property name="js.last.introduce.type" value="LET" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Level-4" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettier.import.notification.dismissed" value="true" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="E:\GitHub\Level-5\node_modules\prettier" />
     <property name="ts.external.directory.path" value="E:\GitHub\Level-5\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -47,6 +52,10 @@
       <workItem from="1610803808667" duration="641000" />
       <workItem from="1610811129466" duration="5707000" />
       <workItem from="1610824208681" duration="497000" />
+      <workItem from="1610824789066" duration="1493000" />
+      <workItem from="1610872010004" duration="2479000" />
+      <workItem from="1610874502566" duration="232000" />
+      <workItem from="1610876820682" duration="171000" />
     </task>
     <servers />
   </component>
@@ -58,14 +67,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="581" y="224" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1610703030978" />
+    <state x="358" y="171" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610874107383">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="358" y="171" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610874107383" />
     <state x="823" y="317" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610788907929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="823" y="317" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610788907929" />
+    <state x="206" y="203" width="1365" height="669" key="DiffContextDialog" timestamp="1610876916728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="206" y="203" width="1365" height="669" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610876916728" />
     <state x="1457" y="309" key="FileChooserDialogImpl" timestamp="1610814854697">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1457" y="309" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610814854697" />
+    <state width="1527" height="222" key="GridCell.Tab.0.bottom" timestamp="1610873805745">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1527" height="222" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610873805745" />
+    <state width="1527" height="222" key="GridCell.Tab.0.center" timestamp="1610873805745">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1527" height="222" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610873805745" />
+    <state width="1527" height="222" key="GridCell.Tab.0.left" timestamp="1610873805745">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1527" height="222" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610873805745" />
+    <state width="1527" height="222" key="GridCell.Tab.0.right" timestamp="1610873805745">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1527" height="222" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610873805745" />
+    <state x="609" y="393" key="VCS.ChangelistChooser" timestamp="1610874547901">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="609" y="393" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610874547901" />
+    <state x="352" y="161" width="1365" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1610874607004">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="352" y="161" width="1365" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610874607004" />
+    <state x="790" y="420" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610874509402">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="790" y="420" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610874509402" />
     <state x="912" y="289" width="585" height="592" key="find.popup" timestamp="1610644235559">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

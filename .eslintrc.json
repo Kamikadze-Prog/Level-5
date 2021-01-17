@@ -9,19 +9,23 @@
         "airbnb/hooks",
         "prettier",
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:prettier/recommended",
+      //  "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 12,
+        "ecmaVersion": 11,
         "sourceType": "module"
     },
     "plugins": [
+        "lint",
+        "prettier",
         "@typescript-eslint"
     ],
     "rules": {
+        "prettier": true,
+        "prettier/prettier": "error",
         "semi": ["error", "always"],
         "quotes": "off"
-       // "quotes": ["error", "double"]
     }
 }

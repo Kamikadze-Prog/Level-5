@@ -5684,7 +5684,7 @@ function clickChecker() {
     var startTimer = document.getElementById('startTimer');
     var innerText = document.getElementById('timer-inner-text');
     var oneHour = 60;
-    clickMinus.addEventListener("click", function () {
+    clickMinus.addEventListener('click', function () {
         if (time.textContent == '0 : 00') {
             time.textContent = '0';
         }
@@ -5692,7 +5692,7 @@ function clickChecker() {
         var result = value - 1 < 0 ? 0 : --value;
         time.textContent = "" + result;
     });
-    clickPlus.addEventListener("click", function () {
+    clickPlus.addEventListener('click', function () {
         if (time.textContent == '0 : 00') {
             time.textContent = '0';
         }
@@ -5700,24 +5700,24 @@ function clickChecker() {
         var result = value + 1 == oneHour ? 0 : ++value;
         time.textContent = "" + result;
     });
-    startTimer.addEventListener("click", function () {
+    startTimer.addEventListener('click', function () {
         if (Number(time.textContent) != 0) {
             clickMinus.classList.toggle('display');
             clickPlus.classList.toggle('display');
             startTimer.classList.toggle('display');
-            innerText.textContent = "Осталось";
+            innerText.textContent = 'Осталось';
             var eventTime = Number(time.textContent) * oneHour;
             var duration = moment.duration(eventTime * 1000, 'milliseconds');
             var timer = setInterval(function () {
                 duration = moment.duration(duration.asSeconds() * 1000 - 1000, 'milliseconds');
                 var seconds = duration.seconds() <= 9 ? "0" + duration.seconds() : duration.seconds(); // add 0 if seconds <=9
-                time.textContent = duration.minutes() + " : " + seconds;
+                time.textContent = duration.minutes() + ' : ' + seconds;
                 if (duration.minutes() === 0 && duration.seconds() === 0) {
                     clearInterval(timer);
                     clickMinus.classList.toggle('display');
                     clickPlus.classList.toggle('display');
                     startTimer.classList.toggle('display');
-                    innerText.textContent = "Укажите время в минутах";
+                    innerText.textContent = 'Укажите время в минутах';
                 }
             }, 1000);
         }

@@ -1,82 +1,90 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 .wrapper {
-    max-width: 600px;
-    height: 250px;
-    margin: 30px auto 0 auto;
-    padding: 20px 0;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .08);
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  max-width: 600px;
+  height: 250px;
+  margin: 30px auto 0 auto;
+  padding: 20px 0;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #time_counter_wrapper {
-    width: 300px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px 0;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
 }
 
-#minusTime, #plusTime, #startTimer {
-    border: none;
-    width: 50px;
-    height: 50px;
-    text-decoration: none;
-    background: #0189c4;
-    font-size: 20px;
-    color: #ffffff;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 2px;
+#minusTime,
+#plusTime,
+#startTimer {
+  border: none;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  background: #0189c4;
+  font-size: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 2px;
 }
 
 #startTimer {
-    width: 100px;
-    background-color: #3eb03e;
+  width: 100px;
+  background-color: #3eb03e;
 }
 
-#plusTime:hover, #minusTime:hover {
-    background: #0372a0;
+#plusTime:hover,
+#minusTime:hover {
+  background: #0372a0;
 }
 
 #startTimer:hover {
-    background-color: #2d8a2d;
+  background-color: #2d8a2d;
 }
 
 button:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
-button:visited, button:focus, button:active, button:hover {
-    outline: 0 none;
+button:visited,
+button:focus,
+button:active,
+button:hover {
+  outline: 0 none;
 }
 
-#timer-inner-text, #timeSave, h1 {
-    color: #0099dc;
-    text-shadow: #999 1px 1px 5px;
-    font-family:   sans-serif;
-    font-weight: 300;
+#timer-inner-text,
+#timeSave,
+h1 {
+  color: #0099dc;
+  text-shadow: #999 1px 1px 5px;
+  font-family: sans-serif;
+  font-weight: 300;
 }
 
 h1 {
-    font-size: 50px;
-    line-height: 50px;
-    letter-spacing: 2px;
-    font-style: normal;
-    font-weight: normal;
-    margin-bottom: 10px;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: 2px;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 .display {
-    display: none;
+  display: none;
 }

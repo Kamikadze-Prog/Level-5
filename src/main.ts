@@ -1,7 +1,7 @@
-import {clickChecker} from "./greet";
+import { clickChecker } from './greet';
 
 function showChecker() {
-    clickChecker();
+  clickChecker();
 }
 
 showChecker();

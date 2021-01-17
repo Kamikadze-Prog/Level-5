@@ -4,4 +4,5 @@ function showChecker() {
   clickChecker();
 }
 
-showChecker();
+showCh
+ecker();

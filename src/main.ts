@@ -1,6 +1,7 @@
 import { clickChecker } from './greet';
 
-function showChecker() {
+function 
+showChecker() {
   clickChecker();
 }
 

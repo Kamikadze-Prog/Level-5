@@ -5,5 +5,4 @@ showChecker() {
   clickChecker();
 }
 
-showCh
-ecker();
+showChecker();

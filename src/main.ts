@@ -1,8 +1,8 @@
-import { clickChecker } from './greet';
+import { clickChecker } from './greet'; // eslint-disable-line
 
-function 
-showChecker() {
-  clickChecker();
+function showChecker() {
+  clickCh
+  ecker();
 }
 
 showChecker();

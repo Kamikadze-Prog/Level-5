@@ -1,28 +1,10 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-
-    "extends": [
-        "airbnb",
-        "prettier",
-        "eslint:recommended",
-        "stylelint-config-prettier"
-      //  "plugin:@typescript-eslint/recommended"
-    ],
     "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaVersion": 11,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "lint",
-        "prettier",
-        "@typescript-eslint/recommended"
-    ],
+    "plugins": ["lint", "prettier"],
+    "extends": ["airbnb", "prettier", "plugin:@typescript-eslint/eslint-recommended"],
     "rules": {
-        "prettier": true,
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/ban-ts-ignore": "off",
         "prettier/prettier": "error",
         "semi": ["error", "always"],
         "quotes": "off"

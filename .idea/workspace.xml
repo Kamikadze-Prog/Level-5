@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58366404-8854-4241-9b8a-1a55c9861d66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/@typescript-eslint/eslint-plugin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@typescript-eslint/eslint-plugin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/stylelint-config-prettier/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/stylelint-config-prettier/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/greet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/greet.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +32,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.20" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Level-4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettier.import.notification.dismissed" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="E:\GitHub\Level-5\node_modules\prettier" />
@@ -55,6 +64,10 @@
       <workItem from="1610872010004" duration="2479000" />
       <workItem from="1610874502566" duration="232000" />
       <workItem from="1610876820682" duration="7124000" />
+      <workItem from="1610891863174" duration="1315000" />
+      <workItem from="1610913790229" duration="612000" />
+      <workItem from="1610961603871" duration="7177000" />
+      <workItem from="1610980767835" duration="425000" />
     </task>
     <servers />
   </component>
@@ -82,10 +95,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="206" y="203" width="1365" height="669" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610876916728" />
-    <state x="1457" y="309" key="FileChooserDialogImpl" timestamp="1610814854697">
+    <state x="1418" y="294" key="FileChooserDialogImpl" timestamp="1610914423448">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1457" y="309" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610814854697" />
+    <state x="1418" y="294" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610914423448" />
     <state width="1527" height="222" key="GridCell.Tab.0.bottom" timestamp="1610873805745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

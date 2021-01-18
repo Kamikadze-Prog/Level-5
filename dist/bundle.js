@@ -5685,23 +5685,31 @@ function clickChecker() {
     var innerText = document.getElementById('timer-inner-text');
     var oneHour = 60;
     clickMinus.addEventListener('click', function () {
-        if (time.textContent == '0 : 00') {
+        if (time.textContent === '0 : 00') {
             time.textContent = '0';
         }
         var value = Number(time.textContent);
-        var result = value - 1 < 0 ? 0 : --value;
-        time.textContent = "" + result;
+        if (value - 1 < 0) {
+            time.textContent = '0';
+        } else {
+            value -= 1;
+            time.textContent = "" + value;
+        }
     });
     clickPlus.addEventListener('click', function () {
-        if (time.textContent == '0 : 00') {
+        if (time.textContent === '0 : 00') {
             time.textContent = '0';
         }
         var value = Number(time.textContent);
-        var result = value + 1 == oneHour ? 0 : ++value;
-        time.textContent = "" + result;
+        if (value + 1 === oneHour) {
+            time.textContent = '0';
+        } else {
+            value += 1;
+            time.textContent = "" + value;
+        }
     });
     startTimer.addEventListener('click', function () {
-        if (Number(time.textContent) != 0) {
+        if (Number(time.textContent) !== 0) {
             clickMinus.classList.toggle('display');
             clickPlus.classList.toggle('display');
             startTimer.classList.toggle('display');
@@ -5711,7 +5719,7 @@ function clickChecker() {
             var timer = setInterval(function () {
                 duration = moment.duration(duration.asSeconds() * 1000 - 1000, 'milliseconds');
                 var seconds = duration.seconds() <= 9 ? "0" + duration.seconds() : duration.seconds(); // add 0 if seconds <=9
-                time.textContent = duration.minutes() + ' : ' + seconds;
+                time.textContent = duration.minutes() + " : " + seconds;
                 if (duration.minutes() === 0 && duration.seconds() === 0) {
                     clearInterval(timer);
                     clickMinus.classList.toggle('display');

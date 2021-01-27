@@ -13,7 +13,7 @@ export function clickChecker() {
     if (time.textContent === '0 : 00') {
       time.textContent = '0';
     }
-    let value = Number(time.textContent);
+    let value = +time.textContent;
     if (value - 1 < 0) {
       time.textContent = '0';
     } else {
@@ -25,7 +25,7 @@ export function clickChecker() {
     if (time.textContent === '0 : 00') {
       time.textContent = '0';
     }
-    let value = Number(time.textContent);
+    let value = +time.textContent;
     if (value + 1 === oneHour) {
       time.textContent = '0';
     } else {
@@ -35,20 +35,24 @@ export function clickChecker() {
   });
 
   startTimer.addEventListener('click', () => {
-    if (Number(time.textContent) !== 0) {
+    if (time.textContent === '0 : 00') {
+      time.textContent = '0';
+    }
+    if (+time.textContent !== 0) {
       clickMinus.classList.toggle('display');
       clickPlus.classList.toggle('display');
       startTimer.classList.toggle('display');
       innerText.textContent = 'Осталось';
-      const eventTime = Number(time.textContent) * oneHour;
+      const eventTime = +time.textContent * oneHour;
       let duration = moment.duration(eventTime * 1000, 'milliseconds');
       const timer = setInterval(() => {
         duration = moment.duration(
           duration.asSeconds() * 1000 - 1000,
           'milliseconds'
         );
+
         const seconds =
-          duration.seconds() <= 9
+          duration.seconds() < 10 // if second < 10 add 0 to seconds
             ? `0${duration.seconds()}`
             : duration.seconds(); // add 0 if seconds <=9
         time.textContent = `${duration.minutes()} : ${seconds}`;

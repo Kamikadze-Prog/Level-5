@@ -5688,7 +5688,7 @@ function clickChecker() {
         if (time.textContent === '0 : 00') {
             time.textContent = '0';
         }
-        var value = Number(time.textContent);
+        var value = +time.textContent;
         if (value - 1 < 0) {
             time.textContent = '0';
         } else {
@@ -5700,7 +5700,7 @@ function clickChecker() {
         if (time.textContent === '0 : 00') {
             time.textContent = '0';
         }
-        var value = Number(time.textContent);
+        var value = +time.textContent;
         if (value + 1 === oneHour) {
             time.textContent = '0';
         } else {
@@ -5709,16 +5709,20 @@ function clickChecker() {
         }
     });
     startTimer.addEventListener('click', function () {
-        if (Number(time.textContent) !== 0) {
+        if (time.textContent === '0 : 00') {
+            time.textContent = '0';
+        }
+        if (+time.textContent !== 0) {
             clickMinus.classList.toggle('display');
             clickPlus.classList.toggle('display');
             startTimer.classList.toggle('display');
             innerText.textContent = 'Осталось';
-            var eventTime = Number(time.textContent) * oneHour;
+            var eventTime = +time.textContent * oneHour;
             var duration = moment.duration(eventTime * 1000, 'milliseconds');
             var timer = setInterval(function () {
                 duration = moment.duration(duration.asSeconds() * 1000 - 1000, 'milliseconds');
-                var seconds = duration.seconds() <= 9 ? "0" + duration.seconds() : duration.seconds(); // add 0 if seconds <=9
+                var seconds = duration.seconds() < 10 // if second < 10 add 0 to seconds
+                ? "0" + duration.seconds() : duration.seconds(); // add 0 if seconds <=9
                 time.textContent = duration.minutes() + " : " + seconds;
                 if (duration.minutes() === 0 && duration.seconds() === 0) {
                     clearInterval(timer);
@@ -5737,7 +5741,7 @@ exports.clickChecker = clickChecker;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var greet_1 = require("./greet");
+var greet_1 = require("./greet"); // eslint-disable-line
 function showChecker() {
     greet_1.clickChecker();
 }

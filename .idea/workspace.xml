@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58366404-8854-4241-9b8a-1a55c9861d66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@typescript-eslint/eslint-plugin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@typescript-eslint/eslint-plugin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/stylelint-config-prettier/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/stylelint-config-prettier/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/greet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/greet.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-    </list>
+    <list default="true" id="58366404-8854-4241-9b8a-1a55c9861d66" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +56,12 @@
       <workItem from="1610891863174" duration="1315000" />
       <workItem from="1610913790229" duration="612000" />
       <workItem from="1610961603871" duration="7177000" />
-      <workItem from="1610980767835" duration="425000" />
+      <workItem from="1610980767835" duration="1359000" />
+      <workItem from="1610992706496" duration="480000" />
+      <workItem from="1611000318366" duration="14000" />
+      <workItem from="1611692653320" duration="986000" />
+      <workItem from="1611746221987" duration="496000" />
+      <workItem from="1611747902338" duration="1969000" />
     </task>
     <servers />
   </component>
@@ -119,10 +113,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="609" y="393" key="VCS.ChangelistChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610874547901" />
-    <state x="89" y="269" width="1365" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1610884117687">
+    <state x="90" y="65" width="1365" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1611748557503">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="89" y="269" width="1365" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610884117687" />
+    <state x="90" y="65" width="1365" height="669" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1611748557503" />
     <state x="790" y="420" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610874509402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

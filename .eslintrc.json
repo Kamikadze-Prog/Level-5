@@ -3,6 +3,7 @@
     "plugins": ["lint", "prettier"],
     "extends": ["airbnb", "prettier", "plugin:@typescript-eslint/eslint-recommended"],
     "rules": {
+        "no-use-before-define": "off",
         "import/prefer-default-export": "off",
         "@typescript-eslint/ban-ts-ignore": "off",
         "prettier/prettier": "error",

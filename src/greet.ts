@@ -4,58 +4,70 @@ import moment = require('moment');
 export function clickChecker() {
   const clickPlus = document.getElementById('plusTime');
   const clickMinus = document.getElementById('minusTime');
-  const time = document.getElementById('timeSave');
   const startTimer = document.getElementById('startTimer');
-  const innerText = document.getElementById('timer-inner-text');
   const oneHour = 60;
 
+  setMinusListener(clickMinus);
+  setPlusListener(clickPlus, oneHour);
+  setStartListener(startTimer, clickMinus, clickPlus, oneHour);
+}
+
+function setMinusListener(clickMinus: HTMLElement) {
+  const time = document.getElementById('timeSave');
+
   clickMinus.addEventListener('click', () => {
-    if (time.textContent === '0 : 00') {
-      time.textContent = '0';
-    }
-    let value = +time.textContent;
-    if (value - 1 < 0) {
-      time.textContent = '0';
-    } else {
-      value -= 1;
-      time.textContent = `${value}`;
-    }
+    time.textContent = changeZeroTime(time.textContent);
+    const value = +time.textContent;
+    time.textContent = value - 1 < 0 ? '0' : `${value - 1}`;
   });
+}
+
+function setPlusListener(clickPlus: HTMLElement, oneHour: number) {
+  const time = document.getElementById('timeSave');
+
   clickPlus.addEventListener('click', () => {
-    if (time.textContent === '0 : 00') {
-      time.textContent = '0';
-    }
-    let value = +time.textContent;
-    if (value + 1 === oneHour) {
-      time.textContent = '0';
-    } else {
-      value += 1;
-      time.textContent = `${value}`;
-    }
+    time.textContent = changeZeroTime(time.textContent);
+    const value = +time.textContent;
+    time.textContent = value + 1 === oneHour ? '0' : `${value + 1}`;
   });
+}
+
+function changeZeroTime(timer: string): string {
+  return timer === '0 : 00' ? '0' : timer;
+}
+
+function setStartListener(
+  startTimer: HTMLElement,
+  clickMinus: HTMLElement,
+  clickPlus: HTMLElement,
+  oneHour: number
+) {
+  const innerText = document.getElementById('timer-inner-text');
+  const time = document.getElementById('timeSave');
 
   startTimer.addEventListener('click', () => {
-    if (time.textContent === '0 : 00') {
-      time.textContent = '0';
-    }
+    time.textContent = changeZeroTime(time.textContent);
     if (+time.textContent !== 0) {
       clickMinus.classList.toggle('display');
       clickPlus.classList.toggle('display');
       startTimer.classList.toggle('display');
       innerText.textContent = 'Осталось';
+
       const eventTime = +time.textContent * oneHour;
       let duration = moment.duration(eventTime * 1000, 'milliseconds');
+
       const timer = setInterval(() => {
         duration = moment.duration(
           duration.asSeconds() * 1000 - 1000,
           'milliseconds'
         );
-
+        // if second < 10 add 0 to seconds
         const seconds =
-          duration.seconds() < 10 // if second < 10 add 0 to seconds
+          duration.seconds() < 10
             ? `0${duration.seconds()}`
-            : duration.seconds(); // add 0 if seconds <=9
+            : duration.seconds();
         time.textContent = `${duration.minutes()} : ${seconds}`;
+
         if (duration.minutes() === 0 && duration.seconds() === 0) {
           clearInterval(timer);
           clickMinus.classList.toggle('display');

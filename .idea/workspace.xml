@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58366404-8854-4241-9b8a-1a55c9861d66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/greet.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/greet.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +28,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.20" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Level-4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettier.import.notification.dismissed" value="true" />
     <property name="prettierjs.PrettierConfiguration.Package" value="E:\GitHub\Level-5\node_modules\prettier" />
@@ -66,7 +71,11 @@
       <workItem from="1611747902338" duration="2549000" />
       <workItem from="1611751283754" duration="24000" />
       <workItem from="1611751655879" duration="29000" />
-      <workItem from="1611751759982" duration="733000" />
+      <workItem from="1611751759982" duration="779000" />
+      <workItem from="1611780262491" duration="3643000" />
+      <workItem from="1611824571949" duration="1811000" />
+      <workItem from="1611832012965" duration="91000" />
+      <workItem from="1611863745835" duration="663000" />
     </task>
     <servers />
   </component>
@@ -94,10 +103,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="206" y="203" width="1365" height="669" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610876916728" />
-    <state x="1418" y="294" key="FileChooserDialogImpl" timestamp="1611750268339">
+    <state x="1418" y="294" key="FileChooserDialogImpl" timestamp="1611832102750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1418" y="294" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1611750268339" />
+    <state x="1418" y="294" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1611832102750" />
     <state width="1527" height="222" key="GridCell.Tab.0.bottom" timestamp="1610873805745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

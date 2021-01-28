@@ -5680,38 +5680,37 @@ var moment = require("moment");
 function clickChecker() {
     var clickPlus = document.getElementById('plusTime');
     var clickMinus = document.getElementById('minusTime');
-    var time = document.getElementById('timeSave');
     var startTimer = document.getElementById('startTimer');
-    var innerText = document.getElementById('timer-inner-text');
     var oneHour = 60;
+    setMinusListener(clickMinus);
+    setPlusListener(clickPlus, oneHour);
+    setStartListener(startTimer, clickMinus, clickPlus, oneHour);
+}
+exports.clickChecker = clickChecker;
+function setMinusListener(clickMinus) {
+    var time = document.getElementById('timeSave');
     clickMinus.addEventListener('click', function () {
-        if (time.textContent === '0 : 00') {
-            time.textContent = '0';
-        }
+        time.textContent = changeZeroTime(time.textContent);
         var value = +time.textContent;
-        if (value - 1 < 0) {
-            time.textContent = '0';
-        } else {
-            value -= 1;
-            time.textContent = "" + value;
-        }
+        time.textContent = value - 1 < 0 ? '0' : "" + (value - 1);
     });
+}
+function setPlusListener(clickPlus, oneHour) {
+    var time = document.getElementById('timeSave');
     clickPlus.addEventListener('click', function () {
-        if (time.textContent === '0 : 00') {
-            time.textContent = '0';
-        }
+        time.textContent = changeZeroTime(time.textContent);
         var value = +time.textContent;
-        if (value + 1 === oneHour) {
-            time.textContent = '0';
-        } else {
-            value += 1;
-            time.textContent = "" + value;
-        }
+        time.textContent = value + 1 === oneHour ? '0' : "" + (value + 1);
     });
+}
+function changeZeroTime(timer) {
+    return timer === '0 : 00' ? '0' : timer;
+}
+function setStartListener(startTimer, clickMinus, clickPlus, oneHour) {
+    var innerText = document.getElementById('timer-inner-text');
+    var time = document.getElementById('timeSave');
     startTimer.addEventListener('click', function () {
-        if (time.textContent === '0 : 00') {
-            time.textContent = '0';
-        }
+        time.textContent = changeZeroTime(time.textContent);
         if (+time.textContent !== 0) {
             clickMinus.classList.toggle('display');
             clickPlus.classList.toggle('display');
@@ -5721,8 +5720,8 @@ function clickChecker() {
             var duration = moment.duration(eventTime * 1000, 'milliseconds');
             var timer = setInterval(function () {
                 duration = moment.duration(duration.asSeconds() * 1000 - 1000, 'milliseconds');
-                var seconds = duration.seconds() < 10 // if second < 10 add 0 to seconds
-                ? "0" + duration.seconds() : duration.seconds(); // add 0 if seconds <=9
+                // if second < 10 add 0 to seconds
+                var seconds = duration.seconds() < 10 ? "0" + duration.seconds() : duration.seconds();
                 time.textContent = duration.minutes() + " : " + seconds;
                 if (duration.minutes() === 0 && duration.seconds() === 0) {
                     clearInterval(timer);
@@ -5735,7 +5734,6 @@ function clickChecker() {
         }
     });
 }
-exports.clickChecker = clickChecker;
 
 },{"moment":1}],3:[function(require,module,exports){
 "use strict";
